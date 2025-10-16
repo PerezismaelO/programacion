@@ -1,21 +1,20 @@
 import java.util.Scanner;
 
 public class ejercicio1 {
-
-    //Crea un array de 10 posiciones de números con valores pedidos por teclado. Muestra por consola el índice y el valor al que corresponde.
     public static void main(String[] args) {
-        System.out.println("test");
-        //Crea un array de 10 posiciones de números pedidos por teclado
-        Scanner sc = new Scanner(System.in);
-        int[] arrayInt = new int[10];
-        System.out.println("Introduce un valor:");
-        int i;
-        int valor = 0;
-        for (i = 0; i < 10; i++) {
-            valor = sc.nextInt();
-            System.out.println("Introduce otro valor:");
+        // Crea un array de 10 posiciones de números pedidos por teclado
+        Scanner scanner = new Scanner(System.in);
+        int[] arrayint = new int [10];
+        for (int i = 0; i < arrayint.length; i++) {
+            System.out.println("Introduce un número");
+            arrayint[i] = scanner.nextInt();
         }
-        //Muestra por consola el índice y el valor al que correspone.
-        System.out.println("índice " + i++ + " = al valor " + valor);
+        System.out.println("Valores del array");
+        // Mostrar índice de cada valor del array
+        for ( int i = 0; i < arrayint.length; i++) {
+            System.out.println("Índice " + i + "  Valor: " + arrayint[i]);
+        }
+        scanner.close();
     }
 }
+
