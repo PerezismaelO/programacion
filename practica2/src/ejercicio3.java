@@ -3,12 +3,15 @@ public class ejercicio3 {
         // Crea un array que contenga 5 números. Realiza un programa que te muestre
         // por pantalla SOLO el más pequeño de ellos.
         int[] array = {51, 9, 4, 67, 45};
-        int menor = array[3];
+        int menor = array[0];
+
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < array[3]){
+            if (array[i] < menor) {
                 menor = array[i];
-                System.out.println(menor);
+
             }
         }
+        System.out.println("El numero más pequeño es: " + menor);
     }
+
 }
