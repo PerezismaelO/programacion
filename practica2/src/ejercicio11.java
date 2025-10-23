@@ -1,6 +1,6 @@
 import java.util.Scanner:
 
-public class ejercicio8 {
+public class ejercicio11 {
     public static void main(String[] args) {
         // Escribe un programa java que invierta el orden de
         // los valores de un array. Por invertir el orden de los valores de un array,
