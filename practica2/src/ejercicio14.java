@@ -1,4 +1,4 @@
-import java.util.Scanner:
+import java.util.Scanner;
 
 public class ejercicio14 {
     public static void main(String[] args) {
@@ -8,3 +8,5 @@ public class ejercicio14 {
         // Luego pida un nombre a buscar y diga si está en la lista o no, mostrando también en
         // qué posición se encuentra si existe.
         Scanner s = new Scanner(System.in);
+    }
+}

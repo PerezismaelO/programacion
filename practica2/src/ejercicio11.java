@@ -1,4 +1,4 @@
-import java.util.Scanner:
+import java.util.Scanner;
 
 public class ejercicio11 {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class ejercicio11 {
         System.out.println("Introduce 6 números:");
         for (int i = 0; i < array.length; i++) {
             System.out.print("Número " + (i + 1) + ": ");
-            numeros[i] = sc.nextInt();
+            array[i] = s.nextInt();
         }
 
         // Mostrar el array original
@@ -33,6 +33,6 @@ public class ejercicio11 {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-        sc.close();
+        s.close();
     }
 }

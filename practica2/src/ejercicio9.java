@@ -1,6 +1,6 @@
-import java.util.Scanner:
+import java.util.Scanner;
 
-public class ejercicio8 {
+public class ejercicio9 {
     public static void main(String[] args) {
         // Crea un programa en Java que: 1. Pida al usuario por teclado 10 números enteros
         // y los guarde en un array. 2. Recorra el array para encontrar:
@@ -12,11 +12,11 @@ public class ejercicio8 {
         System.out.println("Introduce un numero:");
         for (int i = 0; i < array.length; i++) {
             System.out.print("Número " + (i + 1) + ": ");
-            array[i] = sc.nextInt();
+            array[i] = s.nextInt();
         }
         //Inicializamos máximo y mínimo con el primer valor del array
-        int maximo = numeros[0];
-        int minimo = numeros[0];
+        int maximo = array[0];
+        int minimo = array[0];
         int posicionMax = 0;
         int posicionMin = 0;
 
@@ -24,17 +24,17 @@ public class ejercicio8 {
         for (int i = 1; i < array.length; i++) {
             if (array[i] > maximo) {
                 maximo = array[i];
-                posMax = i;
+                posicionMax = i;
             }
             if (array[i] < minimo) {
                 minimo = array[i];
-                posMin = i;
+                posicionMin = i;
             }
         }
         // Mostrar los resultados
-        System.out.println("Valor máximo: " + maximo + " en la posicion " + posMax);
-        System.out.println("Valor mínimo: " + minimo + " en la posicion " + posMin);
+        System.out.println("Valor máximo: " + maximo + " en la posicion " + posicionMax);
+        System.out.println("Valor mínimo: " + minimo + " en la posicion " + posicionMin);
 
-        sc.close();
+        s.close();
     }
 }

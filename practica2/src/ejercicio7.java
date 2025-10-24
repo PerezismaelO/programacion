@@ -19,13 +19,15 @@ public class ejercicio7 {
             array[i] = s.nextInt();
 
             if (array[i] > 0) {
-                sumarPositivos += numeros[i];
-                contadorPositivos++;
+                sumarPositivos += array[i];
+                contarPositivos++;
             } else if (array[i] < 0) {
                 sumarNegativos += array[i];
-                contadorNegativos++;
+                contarNegativos++;
             }
         }
+        System.out.println("La suma de los positivos es " + sumarPositivos);
+        System.out.println("La suma de los negativos es " + sumarNegativos);
         if (contarPositivos > 0){
             double mediaPositivos = sumarPositivos/contarPositivos;
             System.out.println("La media de los números positivos es: " + mediaPositivos);

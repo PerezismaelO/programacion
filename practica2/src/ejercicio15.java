@@ -1,4 +1,4 @@
-import java.util.Scanner:
+import java.util.Scanner;
 
 public class ejercicio15 {
     public static void main(String[] args) {
@@ -8,3 +8,5 @@ public class ejercicio15 {
         // Elimine los valores duplicados manteniendo solo el primero que apareció.
         // Ordene la lista de menor a mayor y la muestre por pantalla.
         Scanner s = new Scanner(System.in);
+    }
+}

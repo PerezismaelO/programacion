@@ -1,4 +1,4 @@
-import java.util.Scanner:
+import java.util.Scanner;
 
 public class ejercicio12 {
     public static void main(String[] args) {
@@ -10,3 +10,5 @@ public class ejercicio12 {
         // posición de la letraen el abecedario. Utiliza un array para guardar CADA letra
         // del abecedario.
         Scanner s = new Scanner(System.in);
+    }
+}
