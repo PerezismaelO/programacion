@@ -7,8 +7,10 @@ public class ejercicio9 {
         // El valor máximo y la posición en la que aparece.
         // El valor mínimo y la posición en la que aparece.
         Scanner s = new Scanner(System.in);
+
+        // Inicializamos el array
         int[] array = new int[10];
-        // Pedir 10 números
+        // Pedimos 10 números por teclado
         System.out.println("Introduce un numero:");
         for (int i = 0; i < array.length; i++) {
             System.out.print("Número " + (i + 1) + ": ");
@@ -20,7 +22,7 @@ public class ejercicio9 {
         int posicionMax = 0;
         int posicionMin = 0;
 
-        // Recorrer el array para encontrar el máximo y el mínimo
+        // Recorremos el array para encontrar el máximo y el mínimo
         for (int i = 1; i < array.length; i++) {
             if (array[i] > maximo) {
                 maximo = array[i];
@@ -31,10 +33,7 @@ public class ejercicio9 {
                 posicionMin = i;
             }
         }
-        // Mostrar los resultados
         System.out.println("Valor máximo: " + maximo + " en la posicion " + posicionMax);
         System.out.println("Valor mínimo: " + minimo + " en la posicion " + posicionMin);
-
-        s.close();
     }
 }
