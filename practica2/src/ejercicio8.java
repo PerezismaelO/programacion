@@ -8,13 +8,14 @@ public class ejercicio8 {
         Scanner s = new Scanner(System.in);
         int N;
 
-        // El número de personas
+        // Introducimos el número de personas (N)
         System.out.print("Introduce el número de personas: ");
         N = s.nextInt();
         if (N <= 0) {
             System.out.println("Error: N debe ser un número entero positivo.");
             }
         while (N <= 0);
+        // Iniciamos array con un double para que nos de la altura en metros
         double[] array = new double[N];
         double suma = 0;
 
@@ -28,11 +29,13 @@ public class ejercicio8 {
 
         // Calcular la media
         double media = suma / N;
-        System.out.println("La altura media es:" + media);
+        System.out.println("La altura media es:" + media + "metros");
 
-        // Contar cuántas están por encima y por debajo
+        // Contamos cuántas están por encima y por debajo de la media
         int superiores = 0, inferiores = 0;
 
+        // Recorremos el array y si la altura está por encima de la media se
+        // añade 1 a superiores, y si no, se añade 1 a inferiores
         for (double altura : array) {
             if (altura > media) {
                 superiores++;
