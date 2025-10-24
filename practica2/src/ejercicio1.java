@@ -6,7 +6,7 @@ public class ejercicio1 {
         Scanner scanner = new Scanner(System.in);
         int[] arrayint = new int [10];
         for (int i = 0; i < arrayint.length; i++) {
-            System.out.println("Introduce un número");
+            System.out.println("Introduce un numero");
             arrayint[i] = scanner.nextInt();
         }
         System.out.println("Valores del array");
