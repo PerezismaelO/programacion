@@ -10,5 +10,12 @@ public class ejercicio12 {
         // posición de la letraen el abecedario. Utiliza un array para guardar CADA letra
         // del abecedario.
         Scanner s = new Scanner(System.in);
+        System.out.println("Escribe los números del DNI");
+        int DNI = s.nextInt();
+        int letra = 0;
+        char[] array = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+        letra = DNI % 23;
+        System.out.println("La letra de el DNI es " + array[letra]);
+        s.close();
     }
 }
