@@ -8,7 +8,7 @@ public class ejercicio5 {
         // incluidos). A continuación, el programa deberá:
         // dar la posición del número máximo y mínimo
         // la suma total de todas las filas y columnas
-        // la suma de todas las columna
+        // la suma de todas las columnas
         Random randomNum = new Random();
 
         int[][] array = new int [6][10];
