@@ -1,11 +1,10 @@
-import java.util.Scanner;
+import java.util.Random;
 
-public class ejercicio2 {
-    public static void main(String[] args) {
-        // Escribe un programa que solicite 20 números enteros. Estos números debemos de
-        // introducirlo en un array de 4 filas por 5 columnas. El programa mostrará las sumas parciales
-        // de filas y en las columnas el mayor número de la columna. La suma total debe aparecer en
-        // la esquina inferior derecha.
+public class ejercicio4 {
+    public static void main(String[] args) throws InterruptedException {
+        // Modifica el programa anterior de tal forma que las sumas parciales y la suma total
+        // aparezcan en la pantalla con un pequeño retraso, dando la impresión de que el ordenador
+        // se queda “pensando” antes de mostrar los números.
         /*Scanner s = new Scanner(System.in);
 
         int[][] array = new int [4][5];
@@ -16,14 +15,19 @@ public class ejercicio2 {
                 array[i][j] = s.nextInt();
             }
         }*/
+        Thread.sleep(100);
         System.out.println("--------------------------------------------------------------------------");
-        int[][] array = {
-                {2, 5, 3, 6, 7},
-                {7, 4, 3, 2, 45},
-                {6, 63, 2, 4, 6},
-                {3, 5, 6, 7, 3}
-        };
+        int[][] array = new int [4][5];
+
+        Random randomNum = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = randomNum.nextInt(1999) + 1;
+            }
+        }
         int total = 0;
+
         for (int i = 0; i < array.length; i++) { // Recorre las filas
             int sumaFila = 0;
             for (int j = 0; j < array[i].length; j++) { // Recorre las columnas
@@ -31,23 +35,29 @@ public class ejercicio2 {
                 System.out.printf("  " + " %-7d ", array[i][j]);
             }
             total += sumaFila;
+            Thread.sleep(500);
             System.out.printf("Fila %d Suma = %-6d\n", i, sumaFila);
             System.out.println();
         }
 
 
-        for (int j = 0; j < array[0].length; j++) { // Recorre las filas
+        for (int j = 0; j < array[0].length; j++) { // Recorre las columnas
             int mayor = array[0][j];
-            for (int i = 0; i < array.length; i++) { // Recorre las columnas
+            for (int i = 0; i < array.length; i++) { // Recorre las filas
 
                 if (array[i][j]>mayor) {
                     mayor = array[i][j];
 
                 }
             }
+            Thread.sleep(250);
             System.out.printf("   %-8d", mayor);
         }
         System.out.println("Total= " + total);
+        Thread.sleep(100);
         System.out.println("--------------------------------------------------------------------------");
-    }
+    };
+
 }
+
+

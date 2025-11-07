@@ -1,11 +1,9 @@
-import java.util.Scanner;
+import java.util.Random;
 
-public class ejercicio2 {
+public class ejercicio3 {
     public static void main(String[] args) {
-        // Escribe un programa que solicite 20 números enteros. Estos números debemos de
-        // introducirlo en un array de 4 filas por 5 columnas. El programa mostrará las sumas parciales
-        // de filas y en las columnas el mayor número de la columna. La suma total debe aparecer en
-        // la esquina inferior derecha.
+        // Modifica el programa anterior de tal forma que los números que se introducen en el array
+        // se generen de forma aleatoria (valores entre 1 y 1999).
         /*Scanner s = new Scanner(System.in);
 
         int[][] array = new int [4][5];
@@ -17,13 +15,17 @@ public class ejercicio2 {
             }
         }*/
         System.out.println("--------------------------------------------------------------------------");
-        int[][] array = {
-                {2, 5, 3, 6, 7},
-                {7, 4, 3, 2, 45},
-                {6, 63, 2, 4, 6},
-                {3, 5, 6, 7, 3}
-        };
+        int[][] array = new int [4][5];
+
+        Random randomNum = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = randomNum.nextInt(1999) + 1;
+            }
+        }
         int total = 0;
+
         for (int i = 0; i < array.length; i++) { // Recorre las filas
             int sumaFila = 0;
             for (int j = 0; j < array[i].length; j++) { // Recorre las columnas
@@ -49,5 +51,7 @@ public class ejercicio2 {
         }
         System.out.println("Total= " + total);
         System.out.println("--------------------------------------------------------------------------");
+        };
+
     }
-}
+
