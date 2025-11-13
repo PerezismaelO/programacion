@@ -17,22 +17,19 @@ public class ejercicio11 {
             array[i] = s.nextInt();
         }
         // Mostramos el array original para despues poder invertir el orden de los elementos
-        System.out.println("Array original:");
+        System.out.println("Array normal:");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-
-        // Invertimos el orden de los elementos
-        for (int i = 0; i < array.length / 2; i++) {
-            int temp = array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = temp;
+        int[] invertido = new int[6];
+        System.out.println();
+        for (int i = 0; i < array.length; i++) { // Recorremos el array e invertimos el orden de los números
+            invertido[i] = array[array.length - 1 - i];
         }
 
-        // Mostramos el array invertido
-        System.out.println("Array invertido:");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        System.out.println("El array invertido es:");
+        for (int i = 0; i < invertido.length; i++) {
+            System.out.print(invertido[i] + " ");
         }
     }
 }

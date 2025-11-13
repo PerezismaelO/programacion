@@ -10,19 +10,18 @@ public class ejercicio5 {
         // Pedimos que indique el tamaño del array
         System.out.println("Dime el tamaño del array");
 
-        int arrayLength = s.nextInt();
+        int arrayLength = s.nextInt(); // El numero pedido por teclado será la longitud del array
         int[] array = new int[arrayLength];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random()* 9 + 1);
+        for (int i = 0; i < array.length; i++) { // Recorremos el array para asignarles números entre el 0 y el 9
+            array[i] = (int) (Math.random()* 10);
         }
-        for (int j = 0; j < array.length; j++) {
-            System.out.println("El índice es " + j + " Su valor es " + array[j]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("El índice es " + i + " Su valor es " + array[i]);
         }
         int suma = 0;
-        for (int k = 0; k < array.length; k++) {
-            suma += array[k];
+        for (int i = 0; i < array.length; i++) { // Lo recorremos otra vez para hacer la suma
+            suma += array[i];
         }
         System.out.println("La suma es " + suma);
-
         }
     }

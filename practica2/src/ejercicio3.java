@@ -2,6 +2,7 @@ public class ejercicio3 {
     public static void main(String[] args) {
         // Crea un array que contenga 5 números. Realiza un programa que te muestre
         // por pantalla SOLO el más pequeño de ellos.
+
         // Inicializamos el array con 5 valores
         int[] array = {51, 9, 4, 67, 45};
         // Le asignamos la variable menor al primer índice del array

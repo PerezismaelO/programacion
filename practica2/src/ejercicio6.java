@@ -19,10 +19,10 @@ public class ejercicio6 {
             array[i] = s.nextInt();
         }
         // Volvemos a recorrer el array para analizar que valores son positivos, negativos o ceros utilizando un if.
-        for (int j = 0; j < array.length; j++) {
-            if (array[j] > 0) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 0) {
                 positivos++;
-            } else if (array[j] < 0) {
+            } else if (array[i] < 0) {
                 negativos++;
             } else {
                 ceros++;
@@ -32,7 +32,5 @@ public class ejercicio6 {
         System.out.println("Hay " + negativos + " números negativos");
         System.out.println("Hay " + ceros + " ceros");
         }
-
-
     }
 

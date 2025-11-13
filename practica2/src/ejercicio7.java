@@ -28,18 +28,17 @@ public class ejercicio7 {
         }
         System.out.println("La suma de los positivos es " + sumarPositivos);
         System.out.println("La suma de los negativos es " + sumarNegativos);
-        if (contarPositivos > 0){
-            double mediaPositivos = sumarPositivos/contarPositivos;
+        if (contarPositivos > 0){ // Hacemos un if por si no hay números positivos.
+            double mediaPositivos = sumarPositivos / contarPositivos;
             System.out.println("La media de los números positivos es: " + mediaPositivos);
         } else {
             System.out.println("No hay números positivos");
         }
-        if (contarNegativos > 0){
-            double mediaNegativos = sumarNegativos/contarNegativos;
+        if (contarNegativos > 0){ // Hacemos otro if por si no hay números negativos.
+            double mediaNegativos = sumarNegativos / contarNegativos;
             System.out.println("La media de los números negativos es: " + mediaNegativos);
         } else  {
             System.out.println("No hay números negativos");
         }
-        s.close();
     }
 }
