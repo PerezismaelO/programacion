@@ -54,9 +54,8 @@ public class Usuario {
 
     public void setEmail(String nuevoEmail) {
         this.email = email;
-        if (nuevoEmail.contains("@")) {
-            System.out.println("Error: Email inválido");
-
+        if (!nuevoEmail.contains("@")) {
+            System.out.println("Error: Email inválido. No contiene @");
         }
     }
 
