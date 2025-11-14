@@ -9,8 +9,8 @@ public class ejercicio6 {
         // Iniciamos el array
         int[] array = new int[10];
         // Damos valores a las variables para utilizarlas más tarde
-        int positivos = 0;
-        int negativos = 0;
+        int contarPar = 0;
+        int contarImpar = 0;
         int ceros = 0;
 
         // Recorremos el array para indicar por teclado sus valores
@@ -20,16 +20,16 @@ public class ejercicio6 {
         }
         // Volvemos a recorrer el array para analizar que valores son positivos, negativos o ceros utilizando un if.
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0) {
-                positivos++;
-            } else if (array[i] < 0) {
-                negativos++;
+            if (array[i] % 2 == 0) {
+                contarPar++;
+            } else if (array[i] % 2 != 0) {
+                contarImpar++;
             } else {
                 ceros++;
             }
         }
-        System.out.println("Hay " + positivos + " números positivos");
-        System.out.println("Hay " + negativos + " números negativos");
+        System.out.println("Hay " + contarPar + " números pares");
+        System.out.println("Hay " + contarImpar + " números impares");
         System.out.println("Hay " + ceros + " ceros");
         }
     }

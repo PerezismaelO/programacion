@@ -21,15 +21,15 @@ public class ejercicio11 {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-        int[] invertido = new int[6];
+
         System.out.println();
         for (int i = 0; i < array.length; i++) { // Recorremos el array e invertimos el orden de los números
-            invertido[i] = array[array.length - 1 - i];
+            array[i] = array[array.length - 1 - i];
         }
 
         System.out.println("El array invertido es:");
-        for (int i = 0; i < invertido.length; i++) {
-            System.out.print(invertido[i] + " ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
         }
     }
 }
