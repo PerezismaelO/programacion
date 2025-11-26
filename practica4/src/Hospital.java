@@ -6,6 +6,7 @@ public class Hospital {
     private static String nombre;
     private static String CIF;
     private static ArrayList<Area> area = new ArrayList<>();
+    private Direccion direccion;
     // Constructor
     public Hospital (String nom, String CIF, ArrayList A){
         this.nombre = nom;

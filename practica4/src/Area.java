@@ -4,13 +4,13 @@ public class Area {
     private static String identificador;
     private static int planta;
     private static int numMedicos;
-    private Hospital hospital = 0
+    private Hospital hospital;
     // Constructor
-    public Area(String nom, String id, int pla, int nMed, Hospital H) {
+    public Area(String nom, String id, int pla, Hospital H) {
         this.nombre = nom;
         this.identificador = id;
         this.planta = pla;
-        this.numMedicos = nMed;
+        this.numMedicos = 0;
         this.hospital = H;
     }
     // Getter
@@ -55,4 +55,12 @@ public class Area {
     public void setHospital(Hospital hospital) {
         this.hospital = hospital;
     }
+
+    // Funciones
+    // Area a1 = new Area(......)
+    /* Area a2 = new Area(......)
+    ArrayList<Area> areas = { a1, a2, a3 }
+    Cada a1, a2 y a3 contiene: Atributos, get, set y funciones (Dentro de la clase Area)
+    (((DIRECCION)HOSPITAL)AREA)
+     */
 }
