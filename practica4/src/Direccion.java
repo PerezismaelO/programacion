@@ -20,15 +20,19 @@ public class Direccion {
     public static String getCalle() {
         return calle;
     }
+
     public static int getNumero() {
         return numero;
     }
+
     public static int getCodigo_postal() {
         return codigo_postal;
     }
+
     public static String getLocalidad() {
         return localidad;
     }
+
     public static String getProvincia() {
         return provincia;
     }
@@ -38,12 +42,15 @@ public class Direccion {
     public static void setCalle(String calle) {
         Direccion.calle = calle;
     }
+
     public static void setNumero(int numero) {
         Direccion.numero = numero;
     }
+
     public static void setCodigo_postal(int codigo_postal) {
         Direccion.codigo_postal = codigo_postal;
     }
+
     public static void setLocalidad(String localidad) {
         Direccion.localidad = localidad;
     }
@@ -51,4 +58,6 @@ public class Direccion {
     public static void setProvincia(String provincia) {
         Direccion.provincia = provincia;
     }
+
+    // Metodos
 }

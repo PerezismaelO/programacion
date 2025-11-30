@@ -1,9 +1,9 @@
 public class Area {
     // Atributos
-    private static String nombre;
-    private static String identificador;
-    private static int planta;
-    private static int numMedicos;
+    private String nombre;
+    private String identificador;
+    private int planta;
+    private int numMedicos;
     private Hospital hospital;
     // Constructor
     public Area(String nom, String id, int pla, Hospital H) {
@@ -13,54 +13,78 @@ public class Area {
         this.numMedicos = 0;
         this.hospital = H;
     }
-    // Getter
+    // Funciones
+    public void aumentarMedicos() {
+        numMedicos++; }
+    public void disminuirMedicos() {
+        if(numMedicos > 0)
+            numMedicos--;
+    }
+    public String compararMedicos(Area otraArea) {
+        if(this.numMedicos > otraArea.numMedicos) {
+            return "El area " + this.nombre + "tiene más medicos";
+        } else if (this.numMedicos < otraArea.numMedicos) {
+            return "El area " + otraArea.nombre + "tiene más medicos";
+        } else {
+            return "Las dos areas tienen el mismo numero de medicos";
+        }
+    }
+    public int capacidadMaximaRestante(int capacidadMaxima) {
+        return capacidadMaxima - numMedicos;
+    }
 
+    //Getter y setter
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getIdentificador() {
         return identificador;
     }
 
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+
     public int getPlanta() {
         return planta;
+    }
+
+    public void setPlanta(int planta) {
+        this.planta = planta;
     }
 
     public int getNumMedicos() {
         return numMedicos;
     }
 
+    public void setNumMedicos(int numMedicos) {
+        this.numMedicos = numMedicos;
+    }
+
     public Hospital getHospital() {
         return hospital;
-    }
-    // Setter
-
-    public  void setNombre(String nombre) {
-        Area.nombre = nombre;
-    }
-
-    public  void setIdentificador(String identificador) {
-        Area.identificador = identificador;
-    }
-
-    public  void setPlanta(int planta) {
-        Area.planta = planta;
-    }
-
-    public  void setNumMedicos(int numMedicos) {
-        Area.numMedicos = numMedicos;
     }
 
     public void setHospital(Hospital hospital) {
         this.hospital = hospital;
     }
+    // Metodos
+    public void sumarMedicos(){
+        numMedicos++;
+    }
 
-    // Funciones
-    // Area a1 = new Area(......)
-    /* Area a2 = new Area(......)
-    ArrayList<Area> areas = { a1, a2, a3 }
-    Cada a1, a2 y a3 contiene: Atributos, get, set y funciones (Dentro de la clase Area)
-    (((DIRECCION)HOSPITAL)AREA)
-     */
+    // clase area metodo calcular sueldo promedio que devuelva el sueldo bruto promedio de todos los médicos del área
+
+    public double mediaSueldoBruto() {
+
+
+
+    }
+
+
 }

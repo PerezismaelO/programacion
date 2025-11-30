@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Direccion d1 = new Direccion("Ermita de palomares", 7, 11405, "Jerez de la frontera", "Cádiz");
+        Medico med1 = new Medico(32609743D,23);
+        List<Medico> medicos = new ArrayList<>();
+
     }
 }
