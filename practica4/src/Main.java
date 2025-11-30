@@ -1,5 +1,10 @@
+import java.util.*;
+
 public class Main {
-    public static void main(String[] args) {
-        Direccion d1 = new Direccion("Ermita de palomares", 7, 11405, "Jerez de la frontera", "Cádiz");
-    }
+    public static List<Hospital> hospitales = new ArrayList<>();
+    public static List<Area> areas = new ArrayList<>();
+    public static List<Medico> medicos = new ArrayList<>();
+    public static List<Contrato> contratos = new ArrayList<>();
+
+
 }
