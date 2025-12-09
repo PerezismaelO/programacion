@@ -80,11 +80,7 @@ public class Area {
 
     // clase area metodo calcular sueldo promedio que devuelva el sueldo bruto promedio de todos los médicos del área
 
-    public double mediaSueldoBruto() {
 
-
-
-    }
 
 
 }
