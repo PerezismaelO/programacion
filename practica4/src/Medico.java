@@ -1,7 +1,6 @@
 
 import java.time.*;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Medico {
@@ -13,7 +12,8 @@ public class Medico {
     private static double sueldoBruto;
     private static LocalDate fechaDeInicio;
     private Area area;
-    
+    private ArrayList<Paciente> pacientesAsignados;
+
     // Constructor
     public Medico(String DNI, int edad, String sexo, double sueldoBruto, LocalDate fechaDeInicio, Area area) {
         this.DNI = DNI;
@@ -22,6 +22,7 @@ public class Medico {
         this.sueldoBruto = sueldoBruto;
         this.fechaDeInicio = fechaDeInicio;
         this.area = area;
+        this.pacientesAsignados = new ArrayList<>();
 
         area.sumarMedicos();
     }
@@ -140,5 +141,8 @@ public class Medico {
         nuevaArea.aumentarMedicos();
         this.area = nuevaArea;
     }
-    List<Medico> medicos = new ArrayList<>();
+    public int agregarPaciente() {
+        return this.pacientesAsignados.size();
+    }
+
 }

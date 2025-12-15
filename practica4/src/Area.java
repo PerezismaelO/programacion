@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Area {
     // Atributos
     private String nombre;
@@ -77,10 +79,4 @@ public class Area {
     public void sumarMedicos(){
         numMedicos++;
     }
-
-    // clase area metodo calcular sueldo promedio que devuelva el sueldo bruto promedio de todos los médicos del área
-
-
-
-
 }
