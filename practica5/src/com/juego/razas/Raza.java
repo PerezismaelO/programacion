@@ -1,9 +1,9 @@
 package com.juego.razas;
 
-public interface raza {
+public interface Raza {
     int getFuerza();
-    int getIQ();
+    int getInteligencia();
     int getDestreza();
-    int getVida();
+    int getVidaBase();
     String getNombre();
 }

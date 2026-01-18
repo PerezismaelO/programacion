@@ -1,9 +1,14 @@
 package com.juego.razas;
 
-public class Enano implements raza {
+public class Enano implements Raza {
+    @Override
     public int getFuerza() { return 7;}
-    public int getIQ() { return 4;}
-    public int getVida() { return 110;}
+    @Override
+    public int getInteligencia() { return 4;}
+    @Override
+    public int getVidaBase() { return 110;}
+    @Override
     public int getDestreza() { return 4;}
+    @Override
     public String getNombre() { return "Enano"; }
 }

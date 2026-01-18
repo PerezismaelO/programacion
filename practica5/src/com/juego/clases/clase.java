@@ -1,8 +1,10 @@
 package com.juego.clases;
 
 public interface clase {
-    int getBonifIQ();
+    // Definimos los metodos en la interfaz
+    String getNombre();
     int getBonifFuerza();
-    int getBonifHpMax();
+    int getBonifInteligencia();
     int getBonifDestreza();
+    int getVidaMaxima();
 }

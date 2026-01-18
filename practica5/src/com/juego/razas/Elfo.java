@@ -1,9 +1,18 @@
 package com.juego.razas;
 
-public class Elfo implements raza {
+public class Elfo implements Raza {
+    @Override
     public int getFuerza() { return 4;}
-    public int getIQ() { return 6;}
-    public int getVida() { return 90;}
+    @Override
+    public int getInteligencia() { return 6;}
+    @Override
+    public int getVidaBase() { return 90;}
+    @Override
     public int getDestreza() { return 7;}
+    @Override
     public String getNombre() { return "Elfo"; }
+
+
+
+
 }
