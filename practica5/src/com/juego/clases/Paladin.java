@@ -1,5 +1,9 @@
 package com.juego.clases;
 
+import com.juego.habilidades.habilidad;
+
+import java.util.ArrayList;
+
 public class Paladin implements clase{
     // Esta clase guarda los datos
     private String nombre;
@@ -22,4 +26,7 @@ public class Paladin implements clase{
     public int getBonifInteligencia() { return bonifInteligencia;}
     public int getBonifDestreza() { return bonifDestreza;}
     public int getVidaMaxima() { return vidaMaxima;}
+    @Override
+    public ArrayList<habilidad> getHabilidades() { return null;}
+
 }

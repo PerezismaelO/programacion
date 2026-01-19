@@ -7,7 +7,7 @@ public class vistaConsola implements Vista{
     private Scanner sc = new Scanner(System.in);
 
     public int menuPrincipal() {
-        System.out.println("1.Jugar");
+        System.out.println("1.Jugar"); // new (combate)
         System.out.println("2. Crear personaje");
         System.out.println("3. Salir");
         return sc.nextInt();

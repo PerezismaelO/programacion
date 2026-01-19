@@ -1,5 +1,11 @@
 package com.juego.clases;
 
+import com.juego.habilidades.habilidad;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bardo implements clase {
     // Esta clase guarda los datos
     private String nombre;
@@ -27,6 +33,9 @@ public class Bardo implements clase {
         public int getBonifDestreza() { return bonifDestreza;}
         @Override
         public int getVidaMaxima() { return vidaMaxima;}
-
+        @Override
+        public ArrayList<habilidad> getHabilidades() {
+        return null;
+    }
 }
 

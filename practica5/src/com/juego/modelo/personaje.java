@@ -2,6 +2,7 @@ package com.juego.modelo;
 import com.juego.clases.clase;
 import com.juego.habilidades.habilidad;
 import com.juego.razas.Raza;
+import java.util.ArrayList;
 import java.util.List;
 
 public class personaje {
@@ -10,15 +11,16 @@ public class personaje {
     private int inteligencia;
     private int destreza;
     private int vida;
-    private List<habilidad> habilidades;
+    private
+    ArrayList<habilidad> getHabilidades;
 
     public personaje(String nombre, Raza raza, clase clase, List<habilidad> habilidades) {
         this.nombre = nombre;
-        fuerza = raza.getFuerza() + clase.getBonifFuerza();
-        inteligencia = raza.getFuerza() + clase.getBonifInteligencia();
-        destreza = raza.getDestreza () + clase.getBonifDestreza();
-        vida = clase.getVidaMaxima();
-        this.habilidades = habilidades;
+        this.fuerza = raza.getFuerza() + clase.getBonifFuerza();
+        this.inteligencia = raza.getFuerza() + clase.getBonifInteligencia();
+        this.destreza = raza.getDestreza () + clase.getBonifDestreza();
+        this.vida = clase.getVidaMaxima() + raza.getVidaBase();
+        this.getHabilidades = (ArrayList<habilidad>) habilidades;
     }
 
     public void recibirDaño(int daño) {
@@ -28,6 +30,7 @@ public class personaje {
         }
 
     }
+    public String mostrarDatos() { return nombre + " Puntos de salud: " + vida;}
     public void curar(int cantidad) {
         vida += cantidad;
         }
@@ -38,5 +41,5 @@ public class personaje {
     public int getInteligencia() { return inteligencia;}
     public int getDestreza() { return destreza;}
     public int getVida() { return vida;}
-    public List<habilidad> getHabilidades() { return habilidades;}
+
 }

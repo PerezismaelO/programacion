@@ -1,7 +1,7 @@
 package com.juego.razas;
 
 public class Elfo implements Raza {
-    @Override
+    // Atributos
     public int getFuerza() { return 4;}
     @Override
     public int getInteligencia() { return 6;}
