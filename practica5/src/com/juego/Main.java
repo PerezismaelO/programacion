@@ -18,7 +18,7 @@ public class Main {
         habsBardo.add(new cuerpo_a_cuerpo("Golpe de Laúd", 12, 5));
         habsBardo.add(new distancia("Sonido Discordante", 18, 4));
         habsBardo.add(new curar("Melodía Vital", 15, 2));
-        personaje p4 = new personaje("Gimli Cantante", new Enano(), new Bardo(), habsBardo);
+        personaje p4 = new personaje("Gimli Cantan1te", new Enano(), new Bardo(), habsBardo);
 
         // --- PERSONAJE 2: El Sacerdote Elfo ---
         List<habilidad> habsSacerdote = new ArrayList<>();
