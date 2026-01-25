@@ -31,7 +31,7 @@ public class Main {
         List<habilidad> habsPaladin = new ArrayList<>();
         habsPaladin.add(new cuerpo_a_cuerpo("Martillo de Justicia", 25, 3));
         habsPaladin.add(new distancia("Sentencia", 15, 5));
-        habsPaladin.add(new curar("Imposición de Manos", 20, 2));
+        habsPaladin.add(new curar("Imposicion de Manos", 20, 2));
         personaje p6 = new personaje("Uther Protector", new Humano(), new Paladin(), habsPaladin);
 
         // Los añadimos al gestor (puedes añadir los anteriores también si quieres)
