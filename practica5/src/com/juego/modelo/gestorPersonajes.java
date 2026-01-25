@@ -6,7 +6,5 @@ public class gestorPersonajes {
     private List<personaje> personajes = new ArrayList<>();
     public List<personaje> getPersonajes() { return personajes;}
 
-    public void agregarPersonaje(personaje p) {
-        personajes.add(p);
-    }
+    public void agregarPersonaje(personaje p) { personajes.add(p);}
 }

@@ -15,4 +15,5 @@ public interface habilidad {
     // Aplica el efecto de la habilidad
     public void usar(personaje origen, personaje objetivo); // Quien lanza la habilidad y quien la recibe
 
+    int getdaño();
 }

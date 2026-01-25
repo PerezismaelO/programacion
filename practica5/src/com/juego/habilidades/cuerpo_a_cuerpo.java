@@ -1,24 +1,32 @@
 package com.juego.habilidades;
+
 import com.juego.modelo.personaje;
 
-public class cuerpo_a_cuerpo implements habilidad{
-    private int usos = 5;
+public class cuerpo_a_cuerpo implements habilidad {
+    private String nombre;
+    private int daño;
+    private int usos;
+
+    public cuerpo_a_cuerpo(String nombre, int daño, int usos) {
+        this.nombre = nombre;
+        this.daño = daño;
+        this.usos = usos;
+    }
 
     @Override
-    // Devuelve el nombre de la habilidad
-    public String getNombre() { return "Ataque cuerpo a cuerpo";}
+    public String getNombre() { return nombre; }
 
     @Override
-    // Devuelve el numero de usos restantes de la habilidad
     public int getUsos() { return usos; }
 
     @Override
-    // Aplica el efecto de la habilidad
     public void usar(personaje origen, personaje objetivo) {
         if (usos > 0) {
-            int daño = origen.getFuerza() * 2;
             objetivo.recibirDaño(daño);
             usos--;
         }
     }
+
+    @Override
+    public int getdaño() { return daño; }
 }

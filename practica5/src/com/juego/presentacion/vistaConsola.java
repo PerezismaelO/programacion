@@ -1,20 +1,23 @@
 package com.juego.presentacion;
-import com.juego.modelo.personaje;
-
 import java.util.Scanner;
 
-public class vistaConsola implements Vista{
+public class vistaConsola implements Vista {
+    // muestra la información y pide datos
     private Scanner sc = new Scanner(System.in);
 
     public int menuPrincipal() {
-        System.out.println("1.Jugar");
-        System.out.println("2. Crear personaje");
+        System.out.println("1. Jugar");
+        System.out.println("2. Elegir habilidad");
         System.out.println("3. Salir");
+
         return sc.nextInt();
     }
-    @Override
-    public void mostrarEstado(personaje p1, personaje p2) {
-        System.out.println(p1.getNombre() + " Puntos de salud: " + p1.getVida());
-        System.out.println(p2.getNombre() + " Puntos de salud: " + p2.getVida());
+
+    public int pedirOpcion() {
+        return sc.nextInt();
+    }
+
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
     }
 }

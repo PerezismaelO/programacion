@@ -1,24 +1,36 @@
 package com.juego.habilidades;
+
 import com.juego.modelo.personaje;
 
 public class distancia implements habilidad {
-    private int usos = 1;
+    private String nombre;
+    private int daño;
+    private int usos;
+
+    // Constructor que elimina el error "rojo" en el presentador
+    public distancia(String nombre, int daño, int usos) {
+        this.nombre = nombre;
+        this.daño = daño;
+        this.usos = usos;
+    }
 
     @Override
-    // Devuelve el nombre de la habilidad
-    public String getNombre() { return "Ataque a distancia";}
+    public String getNombre() { return nombre; }
 
     @Override
-    // Devuelve el numero de usos restantes de la habilidad
-    public int getUsos() { return usos;}
+    public int getUsos() { return usos; }
 
     @Override
-    // Aplica el efecto de la habilidad
+    public int getdaño() { return daño; }
+
+    @Override
     public void usar(personaje origen, personaje objetivo) {
         if (usos > 0) {
-            int daño = origen.getDestreza() * 4;
-            objetivo.recibirDaño(daño);
-            usos--;
+            System.out.println("🏹 " + origen.getNombre() + " dispara a " + objetivo.getNombre());
+            objetivo.recibirDaño(daño); //
+            this.usos--;
+        } else {
+            System.out.println(" No quedan flechas/munición.");
         }
     }
 }
