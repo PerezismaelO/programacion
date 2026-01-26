@@ -46,12 +46,18 @@ public class presentadorCombate {
         System.out.println("\nELIGE JUGADOR 2");
         mostrarLista(lista);
         jugador2 = lista.get(sc.nextInt() - 1);
-        // Borramos las habilidades para que no se dupliquen
-        jugador1.getHabilidades().clear();
-        jugador2.getHabilidades().clear();
 
-        jugador1.getHabilidades().add(new cuerpo_a_cuerpo("Espadazo", 20, 5));
-        jugador2.getHabilidades().add(new distancia("Flecha", 15, 8));
+        jugador1.getHabilidades().add(new cuerpo_a_cuerpo("Espadazo", 25, 5));
+        jugador1.getHabilidades().add(new distancia("Flecha", 35, 1));
+        jugador1.getHabilidades().add(new curar("Rezo de luz", 40, 3));
+        jugador1.getHabilidades().add(new cuerpo_a_cuerpo("Embestida de acero", 20, 5));
+        jugador1.getHabilidades().add(new distancia("Lluvia de estrellas", 38, 1));
+
+        jugador2.getHabilidades().add(new cuerpo_a_cuerpo("Machaque Sombrío", 21, 5));
+        jugador2.getHabilidades().add(new distancia("Daga Fantasmal", 35, 1));
+        jugador2.getHabilidades().add(new curar("Melodía Reparadora", 40, 3));
+        jugador2.getHabilidades().add(new cuerpo_a_cuerpo("Filo del Destino", 23, 5));
+        jugador2.getHabilidades().add(new distancia("Disparo de Precisión", 38, 1));
 
         System.out.println("✅ Personajes listos");
     }

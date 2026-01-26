@@ -8,18 +8,20 @@ import java.util.List;
 public class personaje {
     // Atributos privados para proteger los datos
     private String nombre;
-    private int fuerza, inteligencia, destreza;
+    private int fuerza;
+    private int inteligencia;
+    private int destreza;
     private int vida;
     private List<habilidad> habilidades;
 
-    // Constructor corregido
+    // Constructor
     public personaje(String nombre, Raza raza, clase clase, List<habilidad> habilidades) {
         this.nombre = nombre;
         // Suma estadísticas de la raza y la clase
         this.fuerza = raza.getFuerza() + clase.getBonifFuerza();
         this.inteligencia = raza.getInteligencia() + clase.getBonifInteligencia();
         this.destreza = raza.getDestreza() + clase.getBonifDestreza();
-        this.vida = clase.getVidaMaxima();
+        this.vida = clase.getVidaMaxima() + raza.getVidaBase();
         this.habilidades = habilidades;
     }
 
