@@ -4,35 +4,62 @@ import com.juego.habilidades.habilidad;
 import java.util.Scanner;
 
 public class combate {
+
+    // Scanner para leer la opción del usuario en cada turno
     private Scanner sc = new Scanner(System.in);
-    // Método principal que recibe a los dos luchadores
+
+    // Metodo principal que inicia el combate entre dos personajes
     public void iniciarCombate(personaje p1, personaje p2) {
+
+        // El combate continúa mientras ambos personajes estén vivos
         while (p1.estaVivo() && p2.estaVivo()) {
-            // Turno Jugador 1
+
+            // Turno del jugador 1
             procesarTurno(p1, p2);
+
+            // Si el jugador 2 muere, se termina el combate
             if (!p2.estaVivo()) break;
 
-            // Turno Jugador 2
+            // Turno del jugador 2
             procesarTurno(p2, p1);
         }
 
+        // Mensajes finales del combate
         System.out.println("\n=== FIN DEL COMBATE ===");
-        System.out.println("Ganador: " + (p1.estaVivo() ? p1.getNombre() : p2.getNombre()));
+
+        // Muestra el nombre del personaje que sigue vivo
+        if (p1.estaVivo()) {
+            System.out.println("Ganador: " + p1.getNombre());
+        } else {
+            System.out.println("Ganador: " + p2.getNombre());
+        }
     }
-    // mostramos las habilidades y ejecutamos la elegida
+
+    // Gestiona un turno completo de un personaje
     private void procesarTurno(personaje atacante, personaje defensor) {
-        System.out.println("\nTurno de: " + atacante.getNombre() + " (" + atacante.getVida() + " PV)");
-        // Recorremos la lista de habilidades del personaje para mostrarlas por pantalla
+
+        // Muestra de quién es el turno y su vida actual
+        System.out.println(
+                "\nTurno de: " + atacante.getNombre() +
+                        " (" + atacante.getVida() + " PV)"
+        );
+
+        // Muestra todas las habilidades del atacante
         for (int i = 0; i < atacante.getHabilidades().size(); i++) {
-            System.out.println((i+1) + ". " + atacante.getHabilidades().get(i).getNombre());
+            System.out.println(
+                    (i + 1) + ". " +
+                            atacante.getHabilidades().get(i).getNombre()
+            );
         }
 
-        // Leemos la opción del usuario
+        // Pide al usuario que elija una habilidad
         System.out.print("Elige ataque: ");
-        int sel = sc.nextInt() - 1;
-        // Obtenemos la habilidad de la lista según la posición elegida
-        habilidad hab = atacante.getHabilidades().get(sel);
-        // Ejecutamos la habilidad pasando del atacante al defensor
+        int seleccion = sc.nextInt() - 1;
+
+        // Obtiene la habilidad elegida de la lista
+        habilidad hab = atacante.getHabilidades().get(seleccion);
+
+        // Ejecuta la habilidad usando al atacante contra el defensor
         hab.usar(atacante, defensor);
     }
 }

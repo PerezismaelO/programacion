@@ -6,11 +6,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class presentadorCombate {
+
     private Vista vista;
+    // El gestor contiene la lista de personajes disponibles
     private gestorPersonajes gestor;
     private Scanner sc = new Scanner(System.in);
-    private personaje luchador1, luchador2;
-
+    private personaje jugador1;
+    private personaje jugador2;
+    // Recibe la vista y el gestor
     public presentadorCombate(Vista vista, gestorPersonajes gestor) {
         this.vista = vista;
         this.gestor = gestor;
@@ -18,38 +21,56 @@ public class presentadorCombate {
 
     public void iniciar() {
         int opcion;
+
         do {
             opcion = vista.menuPrincipal();
-            switch (opcion) {
-                case 1:
-                    if (luchador1 == null || luchador2 == null) {
-                        vista.mostrarMensaje("⚠️ Error: Primero elige 2 personajes en la opción 2.");
-                    } else {
-                        new combate().iniciarCombate(luchador1, luchador2);
-                    }
-                    break;
-                case 2:
-                    gestionarPersonajesYHabilidades();
-                    break;
+
+            if (opcion == 1) {
+                iniciarCombate();
             }
+
+            if (opcion == 2) {
+                elegirPersonajes();
+            }
+
         } while (opcion != 3);
     }
-
-    private void gestionarPersonajesYHabilidades() {
+    // Elegimos los personajes que van a luchar
+    private void elegirPersonajes() {
         List<personaje> lista = gestor.getPersonajes();
 
-        // 1. Elegir Personajes
-        vista.mostrarMensaje("\n--- ELIGE JUGADOR 1 ---");
-        for (int i = 0; i < lista.size(); i++) vista.mostrarMensaje((i+1) + ". " + lista.get(i).getNombre());
-        luchador1 = lista.get(sc.nextInt() - 1);
+        System.out.println("\nELIGE JUGADOR 1");
+        mostrarLista(lista);
+        jugador1 = lista.get(sc.nextInt() - 1);
 
-        vista.mostrarMensaje("\n--- ELIGE JUGADOR 2 ---");
-        luchador2 = lista.get(sc.nextInt() - 1);
+        System.out.println("\nELIGE JUGADOR 2");
+        mostrarLista(lista);
+        jugador2 = lista.get(sc.nextInt() - 1);
+        // Borramos las habilidades para que no se dupliquen
+        jugador1.getHabilidades().clear();
+        jugador2.getHabilidades().clear();
 
-        // 2. Añadir Habilidades (Ejemplo automático para que no de error)
-        luchador1.getHabilidades().add(new cuerpo_a_cuerpo("Espadazo", 20, 5));
-        luchador2.getHabilidades().add(new distancia("Flecha", 15, 8));
+        jugador1.getHabilidades().add(new cuerpo_a_cuerpo("Espadazo", 20, 5));
+        jugador2.getHabilidades().add(new distancia("Flecha", 15, 8));
 
-        vista.mostrarMensaje("✅ Personajes listos y habilidades equipadas.");
+        System.out.println("✅ Personajes listos");
+    }
+    // Muestra los personajes
+    private void mostrarLista(List<personaje> lista) {
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println((i + 1) + ". " + lista.get(i).getNombre());
+        }
+    }
+
+    private void iniciarCombate() {
+        if (jugador1 == null || jugador2 == null) {
+            System.out.println("❌ Primero debes elegir los personajes");
+            return;
+        }
+        // Crea e inicia el combate
+        combate combate = new combate();
+        combate.iniciarCombate(jugador1, jugador2);
     }
 }
+
+
