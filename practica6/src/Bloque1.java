@@ -45,6 +45,7 @@ public class Bloque1 {
         for (String nombre : aventurerosOro.keySet()){
             System.out.println(nombre + " tiene " + aventurerosOro.get(nombre) + " lingotes de oro.");
         }
+        System.out.println("----------------------------------");
     }
 }
 
