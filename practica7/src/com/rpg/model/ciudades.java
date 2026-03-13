@@ -7,6 +7,10 @@ public class ciudades {
     private String clima;
     private Integer nivel;
 
+
+    //  Constructor vacío para que Jackson pueda crear objetos
+    public ciudades() {}
+
     // Constructor
     public ciudades(String nombre, Integer poblacion, String clima, Integer nivel) {
         this.nombre = nombre;

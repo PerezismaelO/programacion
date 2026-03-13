@@ -1,0 +1,5 @@
+[
+  { "id": "W01", "nombre": "Hacha Doble",   "tipo": "ARMA",       "valor": 100 },
+  { "id": "P01", "nombre": "Pocion",        "tipo": "CONSUMIBLE", "valor": 25  },
+  { "id": "E01", "nombre": "Cota de Malla", "tipo": "ARMADURA",   "valor": 200 }
+]

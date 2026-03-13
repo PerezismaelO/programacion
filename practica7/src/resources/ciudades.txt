@@ -1,40 +1,4 @@
 # Nombre;Poblacion;Clima;Riesgo
 Minas Tirith;20000;Soleado;3
 Isengard;5000;Nublado;8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+LineaCorrupta;esto es un error a propósito

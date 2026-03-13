@@ -1,27 +1,34 @@
 package com.rpg.utils;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.rpg.model.personajes;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rpg.handler.formatoInvalidoException;
+import com.rpg.handler.rpgDataException;
+
+import java.io.File;
 import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 
 public class jsonHelper {
-    public static void leerPersonajes() {
+
+    private final ObjectMapper mapper = new ObjectMapper();
+
+    // Lee una lista de objetos desde un fichero JSON
+    public <T> List<T> readList(String ruta, Class<T> clase) throws rpgDataException {
         try {
-            Reader reader = Files.newBufferedReader(Paths.get("ficheros/personaje.json"));
-            List<personajes> lista = new Gson().fromJson(
-                    reader,
-                    new TypeToken<List<personajes>>() {
-                    }.getType()
+            return mapper.readValue(
+                    new File(ruta),
+                    mapper.getTypeFactory().constructCollectionType(List.class, clase)
             );
-            for (personajes p: lista) {
-                System.out.println("Nombre personajes: " + p.getNombre());
-            }
         } catch (IOException e) {
-            System.out.println("No se puede abrir el fichero");
+            throw new formatoInvalidoException("Error leyendo JSON '" + ruta + "': " + e.getMessage());
+        }
+    }
+
+    // Guarda una lista de objetos en un fichero JSON
+    public <T> void writeList(String ruta, List<T> lista) throws rpgDataException {
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(ruta), lista);
+        } catch (IOException e) {
+            throw new rpgDataException("Error guardando JSON '" + ruta + "': " + e.getMessage());
         }
     }
 }

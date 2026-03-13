@@ -2,13 +2,13 @@ package com.rpg.model;
 
 public class items {
     // Atributos
-    private Integer id;
+    private String id;
     private String tipo;
     private String nombre;
     private Integer valor;
 
     // Constructor
-    public items(Integer id, String tipo, String nombre, Integer valor) {
+    public items(String id, String tipo, String nombre, Integer valor) {
         this.id = id;
         this.tipo = tipo;
         this.nombre = nombre;
@@ -16,11 +16,11 @@ public class items {
     }
 
     // Getters and setters
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
