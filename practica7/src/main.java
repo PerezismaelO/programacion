@@ -3,7 +3,7 @@ import com.rpg.handler.rpgDataException;
 import com.rpg.services.gestionMundo;
 import java.util.Arrays;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) {
 

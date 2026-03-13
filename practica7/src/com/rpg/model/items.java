@@ -6,6 +6,7 @@ public class items {
     private String tipo;
     private String nombre;
     private Integer valor;
+    private
 
     // Constructor
     public items(String id, String tipo, String nombre, Integer valor) {
