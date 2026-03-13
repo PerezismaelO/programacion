@@ -3,30 +3,15 @@ import com.rpg.handler.rpgDataException;
 import com.rpg.services.gestionMundo;
 import java.util.Arrays;
 
-public class Main {
+public class main {
 
     public static void main(String[] args) {
 
         gestionMundo mundo = new gestionMundo();
 
         try {
-            // FASE 1: Cargar todos los datos
-            System.out.println("Cargando datos...");
             mundo.cargarTodo();
-            System.out.println("Datos cargados correctamente.");
-
-            // FASE 3: Crear un nuevo personaje
-            mundo.crearPersonaje(
-                    "Legolas",          // nombre
-                    "Elfo",             // raza
-                    15,                 // nivel (prueba con -1 para ver DatoInvalidoException)
-                    Arrays.asList("W01") // ítems (prueba con "XXX" para ver RecursoNoEncontradoException)
-            );
-
-            // FASE 4: Guardar cambios
             mundo.guardarCambios();
-
-            // Mostrar resumen
             mundo.imprimirResumen();
 
         } catch (rpgDataException e) {

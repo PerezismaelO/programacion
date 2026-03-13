@@ -2,18 +2,24 @@ package com.rpg.model;
 
 public class items {
     // Atributos
-    private String id;
-    private String tipo;
-    private String nombre;
-    private Integer valor;
-    private
+    String id;
+    String tipo;
+    String nombre;
+    Integer valor;
+    Integer peso;
+
 
     // Constructor
-    public items(String id, String tipo, String nombre, Integer valor) {
+    public items(String id, String tipo, String nombre, Integer valor, Integer peso) {
         this.id = id;
         this.tipo = tipo;
         this.nombre = nombre;
         this.valor = valor;
+        this.peso = peso;
+
+    }
+
+    public static void add(items i) {
     }
 
     // Getters and setters
@@ -48,4 +54,8 @@ public class items {
     public void setValor(Integer valor) {
         this.valor = valor;
     }
+
+    public Integer getPeso() {return peso;}
+
+    public void setPeso(Integer peso) {this.peso = peso;}
 }

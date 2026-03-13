@@ -10,9 +10,10 @@ public class loggerCustom {
     private static final String RUTA_LOG = "resources/errores.log";
     private static final DateTimeFormatter FMT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    public static Object log;
 
     // Escribe una línea en el fichero errores.log
-    public void log(String mensaje) {
+    public static void log(String mensaje) {
         String timestamp = LocalDateTime.now().format(FMT);
         String linea = "[" + timestamp + "] ERROR: " + mensaje;
 
