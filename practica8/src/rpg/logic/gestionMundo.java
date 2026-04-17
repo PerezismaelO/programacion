@@ -4,5 +4,5 @@ import rpg.ui.Vista;
 
 public class gestionMundo {
     private Vista vista;
-   // this.ItemsDAO = new ItemsDAO;
+
 }
