@@ -39,7 +39,7 @@ public class HabilidadesDAO {
 
     public Habilidades buscarPorId(int idHabilidad) {
         for (Habilidades habilidad : listaHabilidades) {
-            if (idHabilidad == habilidad.getId_habilidades()) {
+            if (idHabilidad == habilidad.get) {
                 return habilidad;
             }
         }

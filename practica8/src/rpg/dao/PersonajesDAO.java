@@ -33,8 +33,7 @@ public class PersonajesDAO {
                         resultSet.getInt("oro"),
                         resultSet.getInt("nivel"),
                         resultSet.getString("nombre"),
-                        resultSet.getInt("id")
-                );
+                        resultSet.getInt("id");
                 listaPersonajes.add(personajeCargado);
             }
         } catch (SQLException e) {
