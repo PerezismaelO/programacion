@@ -25,7 +25,7 @@ public class ClasesDAO {
                 listaClases.add(clase);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("No se ha podido cargar la clase.");;
         }
     }
 
@@ -34,5 +34,9 @@ public class ClasesDAO {
             if (idClase == clase.getId_ClaseRPG()) return clase;
         }
         return null;
+    }
+
+    public List<ClasesRPG> getListaClases() {
+        return listaClases;
     }
 }

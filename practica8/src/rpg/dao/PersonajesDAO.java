@@ -37,12 +37,24 @@ public class PersonajesDAO {
                 listaPersonajes.add(personajeCargado);
             }
         } catch (SQLException e) {
-            throw new RuntimeException("No se ha añaido el personaje");
+            System.out.println("No se ha añaido el personaje");
         }
-
     }
 
+    public List<Personajes> getListaPersonajes() {
+        return listaPersonajes;
+    }
 
+    public void restarOro(int id_personaje, int oro) throws SQLException {
+        String SQL = "UPDATE PERSONAJES SET ORO = ORO - ? WHERE ID = ?";
+        try (Connection conn = Conexion.getConexion();
+             PreparedStatement ps = conn.prepareStatement(SQL);
+             ps.setInt(1, oro);
+             ps.setInt(2, id_personaje);
+             ps.executeUpdate();
+        } catch (SQLException e) {
+        System.out.println(e.getMessage());
+    }
 }
-// 1 y 2 ejercicio es modelo de datos, el 2 es lo hecho en clase, cargar los datos
+
 

@@ -29,7 +29,7 @@ public class CiudadesDAO {
                 listaCiudades.add(ciud);
             }
         }catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("No se ha podido cargar la ciudad.");;
         }
 
     }
@@ -38,6 +38,10 @@ public class CiudadesDAO {
             if (idCiudad == ciudad.getId_Ciudad()) return  ciudad;
         }
         return null;
+    }
+
+    public List<Ciudades> getListaCiudades() {
+        return listaCiudades;
     }
 
 }

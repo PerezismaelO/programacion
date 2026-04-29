@@ -38,4 +38,8 @@ public class RazasDAO {
         }
         return null;
     }
+
+    public List<Razas> getListaRazas() {
+        return listaRazas;
+    }
 }

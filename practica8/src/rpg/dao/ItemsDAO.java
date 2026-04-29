@@ -30,7 +30,7 @@ public class ItemsDAO {
                 listaItems.add(item);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            System.out.println("No se ha podido cargar el item.");;
         }
     }
 
@@ -39,5 +39,9 @@ public class ItemsDAO {
             if (idItem == item.getId_item()) return item;
         }
         return null;
+    }
+
+    public List<Items> getListaItems() {
+        return listaItems;
     }
 }

@@ -46,8 +46,9 @@ public class HabilidadesDAO {
         return null;
     }
 
-    // Método extra útil para este tipo de DAOs
     public List<Habilidades> getListaHabilidades() {
         return listaHabilidades;
     }
+
+
 }
